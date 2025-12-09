@@ -1,4 +1,4 @@
-GET http://localhost:5196
+GET http://localhost:5196/game
 
 ###
 GET http://localhost:5196/games/get/1
@@ -20,7 +20,7 @@ Content-Type: application/json
 {
     "Name": "Not Assassin's Creed",
     "Genre": "IDK",
-    "Price": 100
+    "Price": 10000
 }
 
 ###
