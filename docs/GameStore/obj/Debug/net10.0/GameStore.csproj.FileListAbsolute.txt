@@ -26,3 +26,4 @@ C:\Users\GERRY\OneDrive - Chiang Mai University\GERRY's VS Code files\.netASP\do
 C:\Users\GERRY\OneDrive - Chiang Mai University\GERRY's VS Code files\.netASP\docs\GameStore\obj\Debug\net10.0\GameStore.pdb
 C:\Users\GERRY\OneDrive - Chiang Mai University\GERRY's VS Code files\.netASP\docs\GameStore\obj\Debug\net10.0\GameStore.genruntimeconfig.cache
 C:\Users\GERRY\OneDrive - Chiang Mai University\GERRY's VS Code files\.netASP\docs\GameStore\obj\Debug\net10.0\ref\GameStore.dll
+C:\Users\GERRY\OneDrive - Chiang Mai University\GERRY's VS Code files\.netASP\docs\GameStore\obj\Debug\net10.0\GameStore.sourcelink.json

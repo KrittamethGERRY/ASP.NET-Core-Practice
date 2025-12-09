@@ -1,10 +1,10 @@
 GET http://localhost:5196
 
 ###
-GET http://localhost:5196/game/get/1
+GET http://localhost:5196/games/get/1
 
 ###
-POST http://localhost:5196/game/add
+POST http://localhost:5196/games/add
 Content-Type: application/json
 
 {
@@ -14,7 +14,7 @@ Content-Type: application/json
 }
 
 ###
-PUT http://localhost:5196/game/update/2
+PUT http://localhost:5196/games/update/2
 Content-Type: application/json
 
 {
@@ -24,4 +24,4 @@ Content-Type: application/json
 }
 
 ###
-DELETE http://localhost:5196/game/delete/1
+DELETE http://localhost:5196/games/delete/1

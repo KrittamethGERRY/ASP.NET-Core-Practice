@@ -11,22 +11,23 @@ public static class GameEndpoints
     new (2, "Assassin's Creed Shadows", "Stealth", 1_499),
     new (3, "Final Fantasy XIV", "RPG", 549)
     ];
-    public static WebApplication MapGameEndpoints(this WebApplication app)
+    public static RouteGroupBuilder MapGameEndpoints(this WebApplication app)
     {
+        var group = app.MapGroup("games");
         // GET
-        app.MapGet("/", () => games).WithName(GameEndpointName);
+        group.MapGet("/", () => games).WithName(GameEndpointName);
 
-        app.MapGet("/game/get/{id}", (int Id) => games.Find(game => game.Id == Id));
+        group.MapGet("/get/{id}", (int Id) => games.Find(game => game.Id == Id));
 
         // POST
-        app.MapPost("/game/add", (Game newGame) =>
+        group.MapPost("/add", (Game newGame) =>
         {
             games.Add(new(games.Count + 1, newGame.Name, newGame.Genre, newGame.Price));
             return Results.CreatedAtRoute(GameEndpointName);
         });
 
         // PUT
-        app.MapPut("/game/update/{id}", (int Id, Game newGame) =>
+        group.MapPut("/update/{id}", (int Id, Game newGame) =>
         {
             var index = games.FindIndex(game => game.Id == Id);
             games[index] = new(Id, newGame.Name, newGame.Genre, newGame.Price);
@@ -35,14 +36,14 @@ public static class GameEndpoints
         });
 
         // DELETE
-        app.MapDelete("/game/delete/{id}", (int Id) =>
+        group.MapDelete("/delete/{id}", (int Id) =>
         {
             var game = games.Find(game => game.Id == Id);
             games.Remove(game);
             return Results.NoContent();
         });
 
-        return app;
+        return group;
     }
 }
 
