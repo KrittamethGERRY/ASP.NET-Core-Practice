@@ -1,0 +1,27 @@
+GET http://localhost:5196
+
+###
+GET http://localhost:5196/game/get/1
+
+###
+POST http://localhost:5196/game/add
+Content-Type: application/json
+
+{
+    "Name": "Metro Exodus",
+    "Genre": "Horror Shooting",
+    "Price": 769
+}
+
+###
+PUT http://localhost:5196/game/update/2
+Content-Type: application/json
+
+{
+    "Name": "Not Assassin's Creed",
+    "Genre": "IDK",
+    "Price": 100
+}
+
+###
+DELETE http://localhost:5196/game/delete/1
